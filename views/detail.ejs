@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title><%=title%></title>
+        <link rel="stylesheet" type="text/css" href="/css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="/css/global.css" />
+    </head>
+    <body>
+        <% include common/header.ejs %>
+        <div class="outer">
+            <h1><%=title%></h1>
+        <embed src="<%= movie.flash %>" , allowFullScreen="true", quality="high", width="720px", height="600", align="middle",type="application/x-shockwave-flash" type="" />
+        <p>您当前访问的是第<%= movie._id %>个电影</p>
+        <dl>
+            <dt>电影名字</dt>
+            <dd><%= movie.title %></dd>
+            </dl>
+            <dl>
+                <dt>导演</dt>
+                <dd><%= movie.doctor %></dd>
+            </dl>
+            <dl>
+                <dt>国家</dt>
+                <dd><%= movie.country %></dd>
+            </dl>
+            <dl>
+                <dt>语言</dt>
+                <dd><%= movie.language %></dd>
+            </dl>
+            <dl>
+                <dt>上映年份</dt>
+                <dd><%= movie.year %></dd>
+            </dl>
+            <dl>
+                <dt>简介</dt>
+                <dd><%= movie.summary %></dd>
+            </dl>
+        </div>
+        
+    </body>
+</html>

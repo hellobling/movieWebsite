@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title><%= title%></title>
+        <link rel="stylesheet" type="text/css" href="/css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="/css/global.css" />
+        <script type="text/javascript" src="/js/format.js"></script>
+    </head>
+    <body>
+        
+        <% include common/header.ejs %>
+        <div class="outer">
+            <h1><%= title%></h1>
+            <h2>热门电影推荐</h2>
+            <div class="money">为您优惠：<%= format.formatMoney(100 ,2) %>元</div>
+            <% for(var i = 0;i< movies.length;i++){  var movie = movies[i];   %>
+                <div> 
+                    <p><%= movie.title%></p>
+                    <a href="/movie/<%= movie.id%>">
+                        <img src=<%= movie.poster%> width="100px" height="100px;" alt="<%= movie.title %>" />
+                    </a>
+                    <a href="/movie/<%= movie.id %>" class="bofang">播放按钮</a>
+                </div>
+            <% } %>
+        </div>
+    </body>
+</html>

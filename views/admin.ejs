@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title><%=title%></title>
+        <link rel="stylesheet" type="text/css" href="/css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="/css/global.css" />
+        <style type="text/css">
+            label{display:block;height:30px;margin-bottom: 10px;}
+        </style>
+    </head>
+    <body>
+        <% include common/header.ejs %>
+        <div class="outer">
+            <h1><%=title%></h1>
+            <form action="/admin/movie/new" method="post">
+                <input type="hidden", name="movie[_id]", value="<%= movie._id %>" />
+                <label for="inputTitle">
+                    电影名字
+                    <input id="inputTitle" type="text" name="movie[title]" value="<%= movie.title%>" />
+                </label>
+                <label for="inputDoctor">
+                    电影导演
+                    <input id="inputDoctor" type="text" name="movie[doctor]" value="<%= movie.doctor%>" />
+                </label>
+                <label for="inputCountry">
+                    国家
+                    <input id="inputCountry" type="text" name="movie[country]" value="<%= movie.country%>" />
+                </label>
+                <label for="inputLanguage">
+                    语种
+                    <input id="inputLanguage" type="text" name="movie[language]" value="<%= movie.language%>" />
+                </label>
+                <label for="inputPoster">
+                    海报地址
+                    <input id="inputPoster" type="text" name="movie[poster]" value="<%= movie.poster%>" />
+                </label>
+                <label for="inputLanguage">
+                    片源地址
+                    <input id="inputFlash" type="text" name="movie[flash]" value="<%= movie.flash%>" />
+                </label>
+                <label for="inputYear">
+                    上映年代
+                    <input id="inputYear" type="text" name="movie[year]" value="<%= movie.year%>" />
+                </label>
+                <label for="inputSummary">
+                    电影简介
+                    <input id="inputSummary" type="text" name="movie[summary]" value="<%= movie.summary%>" />
+                </label>
+                <input type="submit" value="录入" />
+            </form>
+        </div>
+    </body>
+</html>
