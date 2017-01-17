@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2016-11-02 09:33:39
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-01-10 16:33:46
+* @Last Modified time: 2017-01-17 15:41:27
 */
 html {
             height: 100%;
@@ -13,6 +13,7 @@ html {
             outline: 0;
             -webkit-text-size-adjust:none;
         }
+label{display:block;height:30px;margin-bottom: 10px;}
 .outer{width:1200px;margin:0 auto;}
 h1{font-size: 22px;font-weight: bold;}
 .bofang{width:100px;height:30px;color:#fff;background:red;display: inline-block;line-height: 30px;text-decoration: none;text-align: center;}
@@ -27,3 +28,5 @@ dt{color:blue;}
 .header a{display:inline-block;width:100px;height:40px;line-height: 40px;background:#d59b09;color:#fff;font-size: 16px;}
 .header a:hover{color:#eee;background:#e1bb1c;}
 .money{height:30px;font-size: 14px;color:red;}
+.top{width:1200px;margin:0 auto;height:40px;line-height: 40px;color:#eee;}
+.top a:hover{color:#d59b09;}

@@ -1,5 +1,7 @@
 var controller = {
-    account : require("./account")
+    account : require("./account"),
+    user : require("./user")
+
 };
 
 module.exports = controller;

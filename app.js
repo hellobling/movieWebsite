@@ -4,6 +4,7 @@ var path = require('path');//静态资源路径
 var mongoose = require('mongoose')
 var _ = require('underscore')
 var Movie = require('./models/movie');
+var User = require('./models/user');
 var port = process.env.PORT || 3000 //设置端口默认3000
 mongoose.connect('mongodb://localhost/imooc')//存入本地的数据库名字起成imooc
 var cookieParser = require('cookie-parser');

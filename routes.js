@@ -23,4 +23,9 @@ module.exports = function (app){
 
     // list delete movie 处理删除请求
     app.delete('/admin/list', controller.account.delete);
+    //登录页面
+    app.get('/admin/register', controller.user.register);
+    app.get('/admin/login', controller.user.login);
+
+
 }
