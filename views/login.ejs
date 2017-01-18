@@ -10,15 +10,15 @@
     <body>
         <div class="outer">
             <h1><%=title%></h1>
-            <form action="/" method="post">
+            <form action="/user/signin" method="post">
                 <input type="hidden"/>
                 <label for="userName">
                     用户名
-                    <input id="userName" type="text" />
+                    <input id="name" type="text" name="user[name]" />
                 </label>
                 <label for="password">
                     密码
-                    <input id="password" type="text" />
+                    <input id="password" type="text" name="user[password]" />
                 </label>
                 <input type="button" value="取消" />
                 <input type="submit" value="提交" />
