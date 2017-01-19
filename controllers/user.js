@@ -60,9 +60,14 @@ module.exports = {
             if(err){
                 console.log(err)
             }
-            console.log(user)
+            
             if(!user) {
                 res.redirect('/')
+            }
+            if(user && user.password == password){
+                res.redirect('/admin/userlist')
+            }else{
+                res.redirect('/admin/login')
             }
         })
     } 
