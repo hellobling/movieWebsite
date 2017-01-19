@@ -15,6 +15,9 @@ app.set('view engine', 'ejs')//设置默认模板引擎
 app.use(cookieParser('zhouliang'));//给req对象上添加cookies属性
 app.use(bodyParser.json({limit: '5mb'}));//是用来解析json数据格式的
 app.use(bodyParser.urlencoded({limit: '5mb'}));//是用来解析我们通常的form表单提交的数据，也就是请求头中包含这样的信息
+app.use(express.session({
+    secret : 'imooc'
+}))
 app.use(express.static(path.join(__dirname, 'public')));//静态资源路径设置
 app.locals.moment = require('moment');
 var config = require('./config');

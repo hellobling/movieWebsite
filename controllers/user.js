@@ -62,10 +62,11 @@ module.exports = {
             }
             
             if(!user) {
-                res.redirect('/')
+                res.redirect('/admin/userlist')
             }
             if(user && user.password == password){
-                res.redirect('/admin/userlist')
+                req.session.user = user;
+                res.redirect('/')
             }else{
                 res.redirect('/admin/login')
             }
