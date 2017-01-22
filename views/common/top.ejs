@@ -1,4 +1,16 @@
+<script src="/js/utils.js"></script>
+<script src="/js/jquery-1.8.3.min.js"></script>
 <div class="top">
-    <a href="/admin/login">登录</a>
-    <a href="/admin/register">注册</a>
+		<a id ='login' href="/admin/login">登录</a>
+    	<a id = 'register' href="/admin/register">注册</a>
+		<a id = 'logout' href="/admin/loginout">登出</a>
 </div>
+<script type="text/javascript">
+	var userId = getCookie('userId');
+	if(userId) {
+		$('#login').hide();
+		$('#register').hide();
+	} else {
+		$('#logout').hide();
+	}
+</script>

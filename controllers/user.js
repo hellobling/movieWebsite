@@ -1,7 +1,10 @@
 var User = require('../models/user');
+var responseUtil = require('../utils/responseUtil');
+var _ = require('underscore');
+
 module.exports = {
     authorize: function (req, res, next){
-        if(!req.cookies.userId || !req.cookies.token) {
+        if(!req.cookies.userId) {
           res.redirect('/admin/login')
         } else {
           next()
@@ -73,12 +76,15 @@ module.exports = {
                 res.redirect('/admin/userlist')
             }
             if(user && user.password == password){
-                responseUtil.setUserCookie(res, result);
-                req.cookies = _.extend(req.cookies, result);
+                responseUtil.setUserCookie(res, user);
                 res.redirect('/')
             }else{
                 res.redirect('/admin/login')
             }
         })
-    } 
+    },
+    loginout : function(req,res){
+        responseUtil.clearUserCookie(res);
+        res.redirect('/')
+    },
 }    
