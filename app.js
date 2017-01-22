@@ -2,7 +2,6 @@ var express = require('express');//加载express模块
 var app = express(); //启动web服务器
 var path = require('path');//静态资源路径
 var mongoose = require('mongoose')
-//var mongoStore = require('connect-mongo')(express)
 var _ = require('underscore')
 var Movie = require('./models/movie');
 var User = require('./models/user');
@@ -17,14 +16,7 @@ app.set("views",'./views')//设置视图根目录
 app.set('view engine', 'ejs')//设置默认模板引擎
 app.use(cookieParser('zhouliang'));//给req对象上添加cookies属性,放在session前使用
 app.use(bodyParser.json({limit: '5mb'}));//是用来解析json数据格式的
-app.use(bodyParser.urlencoded({limit: '5mb'}));//是用来解析我们通常的form表单提交的数据，也就是请求头中包含这样的信息
-// app.use(express.session({
-//     secret : 'imooc',
-//     store: new mongoStore({
-//         url: dbUrl,
-//         conllection: 'sessions'
-//     })
-// }))
+app.use(bodyParser.urlencoded({limit: '5mb'}));//
 app.use(express.static(path.join(__dirname, 'public')));//静态资源路径设置
 app.locals.moment = require('moment');
 var config = require('./config');
