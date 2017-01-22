@@ -9,7 +9,6 @@ var port = process.env.PORT || 3000 //设置端口默认3000
 var dbUrl = 'mongodb://localhost/imooc'
 mongoose.connect(dbUrl)//存入本地的数据库名字起成imooc
 var cookieParser = require('cookie-parser');
-var session = require('express-session')
 var bodyParser = require('body-parser')
 var ejs = require('ejs');//这个必须写
 app.set("views",'./views')//设置视图根目录

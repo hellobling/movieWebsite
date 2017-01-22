@@ -1,5 +1,13 @@
 var User = require('../models/user');
 module.exports = {
+    authorize: function (req, res, next){
+        if(!req.cookies.userId || !req.cookies.token) {
+          res.redirect('/admin/login')
+        } else {
+          next()
+        }
+
+    },
     register : function(req,res){
         res.render('register', {
             title:'注册'
@@ -65,7 +73,8 @@ module.exports = {
                 res.redirect('/admin/userlist')
             }
             if(user && user.password == password){
-                req.session.user = user;
+                responseUtil.setUserCookie(res, result);
+                req.cookies = _.extend(req.cookies, result);
                 res.redirect('/')
             }else{
                 res.redirect('/admin/login')
