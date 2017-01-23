@@ -44,7 +44,7 @@ var config = {
   logLevel:"info",
   cookieOptions: {
     maxAge: 86400 * 30,
-    domain: '.jinhui365.com'
+    domain: '.bling.cn'
   },
   desKey: '-7-*d@#5EdxBvrTRe-#5CtUs',
   version: 3,
