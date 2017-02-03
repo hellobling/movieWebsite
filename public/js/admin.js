@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2016-11-10 14:25:25
 * @Last Modified by:   Marte
-* @Last Modified time: 2016-11-10 15:29:43
+* @Last Modified time: 2017-02-03 14:41:39
 */
 $(function(){
     $('.del').click(function(e){
@@ -21,5 +21,27 @@ $(function(){
                 }
             }
         })
+    })
+    $('#douban').blur(function(){
+        var douban = $(this);
+        var id = douban.val();
+        if(id){
+            $.ajax({
+                url: "https://api.douban.com/v2/movie/subject/" + id ,
+                cache: true,
+                type: 'get',
+                dataType: 'jsonp',
+                crossDomain: true,
+                jsonp: 'callback',
+                success: function(data){
+                    $('#inputTitle').val(data.title)
+                    $('#inputDoctor').val(data.directors[0].name)
+                    $('#inputCountry').val(data.countries[0])
+                    $('#inputPoster').val(data.images.large)
+                    $('#inputYear').val(data.year)
+                    $('#inputSummary').val(data.summary)
+                }
+            })
+        }
     })
 })

@@ -2,31 +2,30 @@
 * @Author: Marte
 * @Date:   2016-11-02 09:33:39
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-01-17 15:41:27
+* @Last Modified time: 2017-02-03 15:21:58
 */
-html {
-            height: 100%;
-            width: 100%;
-            font-family: 'Heiti SC', 'Microsoft YaHei';
-            font-size: 20px;
-            overflow: hidden;
-            outline: 0;
-            -webkit-text-size-adjust:none;
-        }
-label{display:block;height:30px;margin-bottom: 10px;}
-.outer{width:1200px;margin:0 auto;}
-h1{font-size: 22px;font-weight: bold;}
-.bofang{width:100px;height:30px;color:#fff;background:red;display: inline-block;line-height: 30px;text-decoration: none;text-align: center;}
-h2{font-size: 18px;}
-dt{color:blue;}
-.listTable{width:1200px;border:1px solid #eee;margin:0 auto;}
-.listTable thead td{font-weight: bold;font-size: 16px;}
-.listTable td{padding:5px 0;text-align: center;border-right:1px solid #eee;border-bottom: 1px solid #eee;}
-.listTable td a{text-decoration: none;width:60px;height:26px;line-height: 26px;text-align: center;background:green;display:inline-block;color:#fff;}
-.header{height:40px;width:1200px;text-align: center;margin:0 auto 20px;}
-.header ul li{float:left;width:100px;height:40px;}
-.header a{display:inline-block;width:100px;height:40px;line-height: 40px;background:#d59b09;color:#fff;font-size: 16px;}
-.header a:hover{color:#eee;background:#e1bb1c;}
-.money{height:30px;font-size: 14px;color:red;}
-.top{width:1200px;margin:0 auto;height:40px;line-height: 40px;color:#eee;}
-.top a:hover{color:#d59b09;}
+html { height: 100%; width: 100%; font-family: 'Heiti SC', 'Microsoft YaHei'; font-size: 20px; overflow: hidden; outline: 0; -webkit-text-size-adjust: none; }
+label { display: block; margin-bottom: 10px; }
+label span { width: 80px; display: inline-block; vertical-align: middle; }
+label span.intro { vertical-align: top; }
+input[type="text"] { border: 1px solid #b7b7b7; }
+.outer { width: 1200px; margin: 0 auto; }
+h1 { font-size: 22px; font-weight: bold; }
+.bofang { width: 100px; height: 30px; color: #fff; background: red; display: inline-block; line-height: 30px; text-decoration: none; text-align: center; }
+h2 { font-size: 18px; }
+dt { color: blue; }
+.listTable { width: 1200px; border: 1px solid #eee; margin: 0 auto; }
+.listTable thead td { font-weight: bold; font-size: 16px; }
+.listTable td { padding: 5px 0; text-align: center; border-right: 1px solid #eee; border-bottom: 1px solid #eee; }
+.listTable td a { text-decoration: none; width: 60px; height: 26px; line-height: 26px; text-align: center; background: green; display: inline-block; color: #fff; }
+.header { height: 40px; width: 1200px; text-align: center; margin: 0 auto 20px; }
+.header ul li { float: left; width: 100px; height: 40px; }
+.header a { display: inline-block; width: 100px; height: 40px; line-height: 40px; background: #d59b09; color: #fff; font-size: 16px; }
+.header a:hover { color: #eee; background: #e1bb1c; }
+.money { height: 30px; font-size: 14px; color: red; }
+.top { width: 1200px; margin: 0 auto; height: 40px; line-height: 40px; color: #eee; }
+.top a:hover { color: #d59b09; }
+.adminInput input[type="text"] { width: 400px; height: 30px; }
+.write { width: 60px; height: 36px; background: #d59b09; color: #fff; cursor: pointer; }
+.summary { height: 100px; width: 400px; border: 1px solid #b7b7b7; }
+.del { text-decoration: none; width: 60px; height: 26px; line-height: 26px; text-align: center; background: #c94a2d; display: inline-block; color: #fff; }
