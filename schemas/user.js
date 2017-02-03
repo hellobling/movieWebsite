@@ -5,6 +5,13 @@ var UserSchema = new mongoose.Schema({
         type: String
     },
     password: String,
+
+    // 0: nomal user
+    // >10: admin
+    role: {
+        type: Number,
+        default: 0
+    },
     meta:{  //录入数据或更新数据的时间的记录
         createAt: { //创建时候的时间
             type: Date,
