@@ -7,21 +7,11 @@ module.exports = {
         if(!req.cookies.userId) {
           res.redirect('/admin/login')
         } else {
-            res.locals.user = req.user;
             next()
-
         }
 
     },
-    adminReq: function (req, res, next){
-        var user = res.locals.user
-        if(user.role <= 10) {
-          res.redirect('/admin/login')
-        } else {
-          next()
-        }
-
-    },
+   
     register : function(req,res){
         res.render('register', {
             title:'注册'
